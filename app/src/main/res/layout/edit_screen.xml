@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    >
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar"
+                 android:fitsSystemWindows="true"
+                 android:id="@+id/toolBar"/>
+
+        <ImageButton
+            android:id="@+id/imageCover"
+            android:layout_below="@id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@color/text_medium"/>
+
+        <ImageButton
+            android:id="@+id/imageAvatar"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_below="@id/imageCover"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-64dp"
+            android:background="@drawable/oval"
+            android:scaleType="centerCrop"
+            android:elevation="2dp"
+            android:src="@drawable/ic_person"
+            />
+
+        <EditText
+            android:id="@+id/textViewLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageAvatar"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textColor="@color/text_medium"
+            android:textSize="16sp"
+            android:maxLength="32"
+            android:hint="Your name here. Maximum 32 chars"
+
+            />
+
+        <EditText
+            android:id="@+id/textViewLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewLine1"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:maxLength="100"
+            android:hint="Your introduce here. Maximum 100chars"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/buttonAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageCover"
+            android:layout_marginTop="-28dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_check"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            />
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

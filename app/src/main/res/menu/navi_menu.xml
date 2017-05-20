@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/actionProfile"
+            android:icon="@drawable/ic_person"
+            android:title="My profile"
+            />
+        <item
+            android:id="@+id/actionChat"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/actionFollow"
+            android:icon="@drawable/ic_follow"
+            android:title="Follow"
+            />
+        <item
+            android:id="@+id/actionLogout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log out"
+            />
+    </group>
+</menu>

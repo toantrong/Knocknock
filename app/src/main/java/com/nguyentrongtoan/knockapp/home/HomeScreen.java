@@ -176,7 +176,6 @@ public class HomeScreen extends AppCompatActivity {
 
     private void directProfileScreen() {
         cleanStack();
-        mNavigationView.getMenu().findItem(R.id.actionChat).setChecked(true);
         Intent intent = new Intent(this, ProfileScreen.class);
         intent.putExtra(ProfileScreen.KEY_UID, mAuth.getCurrentUser().getUid());
         startActivity(intent);
@@ -184,6 +183,7 @@ public class HomeScreen extends AppCompatActivity {
 
     private void cleanStack() {
         setTitle("Chat");
+        mNavigationView.getMenu().findItem(R.id.actionChat).setChecked(true);
         //first stack is chat
         while (fm.getBackStackEntryCount() > 1) {
             fm.popBackStackImmediate();

@@ -185,7 +185,9 @@ public class ProfileScreen extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getChildren().iterator().hasNext()) {
-                    keybox = dataSnapshot.getKey();
+                    //Path [uid]/[key box]/{uid = true}
+                    keybox = dataSnapshot.getChildren().iterator().next().getKey();
+
                 } else {
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
                     keybox = ref.push().getKey();

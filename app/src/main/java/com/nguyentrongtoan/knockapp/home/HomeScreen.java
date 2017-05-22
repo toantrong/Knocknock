@@ -107,10 +107,10 @@ public class HomeScreen extends AppCompatActivity {
                 mPerson = item;
                 mName.setText(item.name);
                 if (item.photoUrl != null) {
-                    Glide.with(HomeScreen.this).load(item.photoUrl).into(mAvatar);
+                    Glide.with(getApplicationContext()).load(item.photoUrl).into(mAvatar);
                 }
                 if (item.coverUrl != null) {
-                    Glide.with(HomeScreen.this).load(item.coverUrl).into(mCover);
+                    Glide.with(getApplicationContext()).load(item.coverUrl).into(mCover);
                 }
             }
         });
@@ -139,6 +139,7 @@ public class HomeScreen extends AppCompatActivity {
                 FollowPersonData.onDestroy();
                 PeopleListData.onDestroy();
                 ChatListData.onDestroy();
+
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return true;
